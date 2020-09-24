@@ -70,22 +70,14 @@ public:
 		T midy = (corner->y + (corner->y + w)) / 2;
 		T midz = (corner->z + (corner->z + h)) / 2;
 
-		children[TopLeftFront] = new Node<T>(midx, midy, midz,
-											 h / 2, w / 2, d / 2, 0, this);
-		children[TopRightFront] = new Node<T>(midx, corner->y, midz,
-											  h / 2, w / 2, d / 2, 0, this);
-		children[BottomRightFront] = new Node<T>(midx, corner->y, corner->z,
-												 h / 2, w / 2, d / 2, 0, this);
-		children[BottomLeftFront] = new Node<T>(midx, midy, corner->z,
-												h / 2, w / 2, d / 2, 0, this);
-		children[TopLeftBack] = new Node<T>(corner->x, midy, midz,
-											h / 2, w / 2, d / 2, 0, this);
-		children[TopRightBack] = new Node<T>(corner->x, corner->y, midz,
-											 h / 2, w / 2, d / 2, 0, this);
-		children[BottomRightBack] = new Node<T>(corner->x, corner->y, corner->z,
-												h / 2, w / 2, d / 2, 0, this);
-		children[BottomLeftBack] = new Node<T>(corner->x, midy, corner->z,
-											   h / 2, w / 2, d / 2, 0, this);
+		children[TopLeftFront] = new Node<T>(midx, midy, midz, h / 2, w / 2, d / 2, 0, this);
+		children[TopRightFront] = new Node<T>(midx, corner->y, midz, h / 2, w / 2, d / 2, 0, this);
+		children[BottomRightFront] = new Node<T>(midx, corner->y, corner->z, h / 2, w / 2, d / 2, 0, this);
+		children[BottomLeftFront] = new Node<T>(midx, midy, corner->z, h / 2, w / 2, d / 2, 0, this);
+		children[TopLeftBack] = new Node<T>(corner->x, midy, midz, h / 2, w / 2, d / 2, 0, this);
+		children[TopRightBack] = new Node<T>(corner->x, corner->y, midz, h / 2, w / 2, d / 2, 0, this);
+		children[BottomRightBack] = new Node<T>(corner->x, corner->y, corner->z, h / 2, w / 2, d / 2, 0, this);
+		children[BottomLeftBack] = new Node<T>(corner->x, midy, corner->z, h / 2, w / 2, d / 2, 0, this);
 		return;
 	}
 
